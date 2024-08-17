@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pyprint"
+version = '0.1.0'
+description = "This is a python package designed around making printing, debugging, logging, error handling or any displaying of CLI information to the developer or user easier. This contains premade methods to displaying rich textual information to the CLI."
+authors = ["Dan <djhardy.dev@gmail.com>"]
+readme = "README.md"
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+test_paths = ["tests"]
+addopts = "--doctest-glob='*.rst' --doctest-modules --emoji -v -color=yes --cov=src --cov-report term --cov-fail-under=0"
+junit_family = "xunit2"
+[tool.isort]
+profile = "black"
+src_paths = ["src", "tests"]
+
+[tool.poetry.group.test]  # This part can be left out
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+black = "^24.8.0"
+isort = "^5.13.2"
+pytest-mock = "^3.14.0"
+pytest-cov = "^5.0.0"
+pytest-emoji = "^0.2.0"
