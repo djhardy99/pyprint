@@ -8,6 +8,8 @@ package-mode = true
 
 [tool.poetry.dependencies]
 python = "^3.12"
+ipython = "^8.26.0"
+ipykernel = "^6.29.5"
 
 
 [build-system]
@@ -15,13 +17,13 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
-test_paths = ["tests"]
-addopts = "--doctest-glob='*.rst' --doctest-modules --emoji -v -color=yes --cov=src --cov-report term --cov-fail-under=0"
+pythonpath = [".","pyprint"]
+testpaths = ["tests"]
+addopts = "--doctest-glob='*.rst' --doctest-modules --emoji -v -color=yes --cov=pyprint --cov-report term --cov-fail-under=70"
 junit_family = "xunit2"
 [tool.isort]
 profile = "black"
-src_paths = ["src", "tests"]
+src_paths = ["pyprint", "tests"]
 
 [tool.poetry.group.test]  # This part can be left out
 [tool.poetry.group.test.dependencies]
