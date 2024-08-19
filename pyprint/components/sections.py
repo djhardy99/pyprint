@@ -3,7 +3,8 @@ This contains headers, footers, breakpoints and any other section markers that a
 """
 
 from pyprint.colors import Colors, Styles
-from pyprint.utils import get_term_width, validate_string
+from .terminal_utils import get_term_width
+from pyprint.components.validators import validate_string
 
 
 def pyprint_header(text: str, return_str: bool = False) -> str | None:

@@ -83,11 +83,13 @@ def pyprint_dict(
             value_str: str = pyprint_item(item=value, return_str=True, is_key=False)
 
         return_str_list.append(f"{indent}  {key_str}{colon_section} {value_str}")
-
-    return_str_item: str = (
-        f"{str_start}\n{'\n'.join(return_str_list)}\n{indent}{str_end}"
+    # return_str_item: str = (
+    #     f"{str_start}\n{'\n'.join(return_str_list)}\n{indent}{str_end}"
+    # )
+    # Changed due to fstring issues in older versions
+    return_str_item = (
+        f"{str_start}\n" + "\n".join(return_str_list) + f"\n{indent}{str_end}"
     )
-
     if return_str:
         return return_str_item
     print(return_str_item)

@@ -3,11 +3,11 @@ This contains the logic for printing each 'primitive' data type.
 
 Currently supports:
 
-Text Type: 	str
-Numeric Types: 	int, float, complex
-Boolean Type: 	bool
-Binary Types: 	bytes
-None Type: 	NoneType
+Text Type: str
+Numeric Types: int, float, complex
+Boolean Type: bool
+Binary Types: bytes
+None Type: NoneType
 """
 
 from typing import Any
