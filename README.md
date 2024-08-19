@@ -9,7 +9,7 @@ This allows you and your team to more easily investigate and digest code output 
 
 ## Install
 ```
-python -m pip install pyprint
+python -m pip install git+https://github.com/djhardy99/pyprint
 ```
 
 ## How to use
